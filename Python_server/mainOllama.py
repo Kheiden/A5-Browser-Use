@@ -158,7 +158,8 @@ async def execute_task(task_id: int, task: str):
         agent = Agent(
             task=task,
             llm=ChatOllama(
-            model="qwen2.5:32b-instruct-q4_K_M",
+                base_url="http://host.docker.internal:11435",
+                model="qwen2.5:32b-instruct-q4_K_M",
             num_ctx=32000
             ),
             browser=browser
