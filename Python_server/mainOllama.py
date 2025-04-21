@@ -26,7 +26,8 @@ from typing import List, Optional
 from enum import Enum
 from fastapi.middleware.cors import CORSMiddleware
 
-
+import os
+os.environ["ANONYMIZED_TELEMETRY"] = "false"
 
 # ----------------------------
 # 1. Configure Logging
